@@ -8,7 +8,7 @@
     "start:prod": "SET NODE_ENV=production& nodemon server.js",
     "debug": "ndb server.js",
     "watch:js": "parcel watch ./public/script/index.js --out-dir ./public/script --out-file bundle.js",
-    "build:js": "parcel watch ./public/script/index.js --out-dir ./public/script --out-file bundle.js"
+    "build:js": "parcel build ./public/script/index.js --out-dir ./public/script --out-file bundle.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "@babel/polyfill": "^7.4.4",
     "axios": "^0.18.0",
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
     "cookie-parser": "^1.4.4",
     "dotenv": "^9.0.1",
     "eslint-plugin-react-hooks": "^4.2.0",

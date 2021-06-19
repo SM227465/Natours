@@ -8,6 +8,7 @@ const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
 const cookieParser = require("cookie-parser");
+const compression = require("compression");
 
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/error");
@@ -68,16 +69,7 @@ app.use(
   })
 );
 
-// viii) serving static files
-// app.use(express.static(`${__dirname}/public`));
-
-// app.use(express.static("public"));
-
-// app.get("/api/v1/tours", getTours);
-// app.get("/api/v1/tours/:id", getTour);
-// app.post("/api/v1/tours", createTour);
-// app.patch("/api/v1/tours/:id", updateTour);
-// app.delete("/api/v1/tours/:id", deleteTour);
+app.use(compression());
 
 // 2. ROUTES
 app.use("/", viewRouter);

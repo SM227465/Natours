@@ -67,7 +67,6 @@ reviewSchema.statics.calAvgRatings = async function (tourId) {
       },
     },
   ]);
-  // console.log(stats);
 
   if (stats.length > 0) {
     await Tour.findByIdAndUpdate(tourId, {
@@ -89,7 +88,6 @@ reviewSchema.post("save", function () {
 
 reviewSchema.pre(/^findOneAnd/, async function (next) {
   this.r = await this.findOne();
-  console.log(this.r);
   next();
 });
 

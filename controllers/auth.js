@@ -89,7 +89,6 @@ exports.protect = catchAsync(async (req, res, next) => {
     token = req.cookies.jwt;
   }
   if (!token) {
-    // console.log(token);
     return next(
       new AppError("Your are not login! please login to get access.", 401)
     );
