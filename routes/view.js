@@ -7,6 +7,12 @@ const router = express.Router();
 
 // router.use(authController.isLoggedIn);
 router.get(
+  "/signup",
+  authController.isLoggedIn,
+  viewController.getSignupForm,
+  authController.signup
+);
+router.get(
   "/",
   bookingController.createBookingCheckout,
   authController.isLoggedIn,

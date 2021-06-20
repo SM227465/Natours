@@ -5,6 +5,12 @@ const Booking = require("../models/booking");
 const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
 
+exports.getSignupForm = (req, res) => {
+  res.status(200).render("signup", {
+    title: "Create your account",
+  });
+};
+
 exports.getOverview = catchAsync(async (req, res, next) => {
   // i) Get tour data from collection
   const tours = await Tour.find();

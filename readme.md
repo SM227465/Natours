@@ -1,3 +1,3 @@
 #Natours Application
 
-Build using modern technologies: Node.js, express, MongoDB
+Build using modern technologies: Node.js, express, MongoDB, pug
