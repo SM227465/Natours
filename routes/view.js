@@ -5,7 +5,8 @@ const bookingController = require('../controllers/booking');
 
 const router = express.Router();
 
-// router.use(authController.isLoggedIn);
+router.use(viewController.alerts);
+
 router.get(
   '/signup',
   authController.isLoggedIn,
